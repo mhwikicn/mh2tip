@@ -1,0 +1,199 @@
+﻿<html>
+<head>
+<title>ＭＨ２ダメージ計算機（片手剣）</title>
+<meta http-equiv="Content-Script-Type" content="text/javascript" charset=UTF-8">
+<META name="description" content="プレイステーション２用ゲーム　怪物猎人２　ダメージ計算機（片手剣）">
+<META name="keywords" content="プレイステーション２,ＰＳ２,PS2,ゲーム,攻略,怪物猎人２,ＭＨ２,MH2">
+
+<base target="_self">
+</head>
+
+<body>
+
+<a name="top"></a>
+
+<script type="text/javascript" src="data.js"></script>
+<script src="test.js"></script>
+
+<noscript>
+JavaScriptを使用しています。対応ブラウザで表示してください。
+</noscript>
+
+
+
+
+<br><br>
+
+主な片手剣で縦斬り（威力14）を当てた時のおおよそのダメージを計算できます<br>
+<br>
+
+<form name="F1" action="test01.html#">
+
+　獲物と部位
+  <select name="bui" onclick="test(14,1.4,3)">
+   <option value="065 075 060 030 010 010 000 015">桃毛兽王頭
+   <option value="070 070 075 015 005 015 000 000">雪狮子王頭
+   <option value="035 050 030 015 005 015 000 010">大名盾蟹足
+   <option value="030 050 025 020 005 025 000 010">大名盾蟹殻
+   <option value="025 030 030 005 005 015 000 010">将军镰蟹足
+   <option value="025 035 020 005 005 025 000 010">将军镰蟹殻
+   <option value="--- --- --- --- --- --- --- ---">
+   <option value="050 080 100 010 030 030 000 040">大怪鸟頭
+   <option value="075 070 070 010 010 025 000 015">大怪鸟翼
+   <option value="030 080 099 050 020 000 010 020">毒怪鸟頭
+   <option value="090 040 080 030 010 000 010 010">毒怪鸟尾
+   <option value="110 100 150 005 010 015 005 015">砂龙王首
+   <option value="060 050 100 030 000 030 005 005">水龙首
+   <option value="100 080 080 035 000 035 005 005">水龙腹
+   <option value="045 060 090 040 005 000 005 005">电龙頭
+   <option value="045 060 080 005 040 000 005 005">赤电龙頭
+   <option value="020 025 050 010 020 010 018 010">岩龙腹
+   <option value="025 030 030 000 035 005 035 015">铠龙腹
+   <option value="080 080 075 015 050 005 050 015">铠龙腹壊
+   <option value="015 025 020 000 040 005 000 000">黒グラビ腹
+   <option value="080 080 075 010 090 005 030 000">黒グラビ腹壊
+   <option value="020 020 020 000 020 005 000 000">黒グラビ翼
+   <option value="025 010 025 000 010 015 015 030">角龙頭
+   <option value="060 055 085 000 005 015 015 020">角龙尾
+   <option value="025 020 040 005 000 020 000 030">一角龙頭
+   <option value="080 060 120 010 000 025 000 020">一角龙尾
+   <option value="055 050 060 000 020 000 005 010">黑狼鸟頭
+   <option value="010 010 060 015 040 015 030 030">黑狼鸟腹
+   <option value="--- --- --- --- --- --- --- ---">
+   <option value="090 080 070 000 015 020 035 015">雌火龙頭
+   <option value="060 055 090 000 005 020 010 005">雌火龙腹
+   <option value="045 040 050 000 005 010 005 005">雌火龙足
+   <option value="090 080 070 000 015 020 035 010">桜レイア頭
+   <option value="060 055 090 000 005 020 010 005">桜レイア腹
+   <option value="055 050 050 000 005 010 005 005">桜レイア足
+   <option value="025 080 040 000 015 030 000 005">金レイア頭
+   <option value="080 020 020 000 010 030 000 005">金レイア翼
+   <option value="025 025 060 000 005 010 000 005">金レイア尾
+   <option value="025 040 050 000 005 010 000 005">金レイア足
+   <option value="080 070 070 000 030 015 030 040">雄火龙頭
+   <option value="045 040 090 000 015 015 010 025">雄火龙腹
+   <option value="045 050 045 000 010 005 005 020">雄火龙足
+   <option value="080 070 070 000 015 015 030 015">蒼レウス頭
+   <option value="045 040 090 000 015 015 010 015">蒼レウス腹
+   <option value="045 040 065 000 005 005 005 005">蒼レウス足
+   <option value="025 080 025 000 030 030 000 010">銀レウス頭
+   <option value="080 020 030 000 030 030 000 010">銀レウス翼
+   <option value="025 025 070 000 010 010 000 005">銀レウス尾
+   <option value="025 040 050 000 010 010 000 005">銀レウス足
+   <option value="--- --- --- --- --- --- --- ---">
+   <option value="045 055 030 010 005 025 050 000">钢龍頭
+   <option value="035 030 040 005 000 030 040 000">钢龍尾
+   <option value="050 050 050 000 000 020 035 035">霞龍頭
+   <option value="030 025 010 000 000 015 020 025">霞龍腹
+   <option value="040 070 020 000 025 010 040 010">炎王龍頭
+   <option value="025 025 040 000 030 005 050 010">テオ（ナナ）尾
+   <option value="028 020 030 020 005 015 020 005">老山龍　頭
+   <option value="055 050 040 020 005 015 030 005">老山龍　腹
+   <option value="000 000 080 050 005 015 100 005">老山龍　背中弱点
+   <option value="090 100 080 005 005 000 005 005">麒麟角
+   <option value="045 040 060 015 015 000 010 005">麒麟胴
+   <option value="032 037 025 020 005 015 020 005">砦蟹足
+   <option value="038 040 040 020 005 020 020 005">砦蟹頭
+   <option value="050 040 020 000 000 000 030 030">浮岳龍触手
+   <option value="060 050 030 000 000 000 020 030">浮岳龍触角
+   <option value="090 080 090 000 010 000 050 035">浮岳龍腹
+   <option value="060 060 060 005 005 000 000 030">金狮子頭
+   <option value="--- --- --- --- --- --- --- ---">数値入力
+ </select>
+
+<br><br>
+
+武器選択
+  <select name="buki" onclick="test(14,1.4,3)">
+   <option value="02100000">死亡麻痹
+   <option value="02240000">致命钩刃斧
+   <option value="02800000">咒魂
+   <option value="02523801">伊夫里特之髓（火）
+   <option value="02384801">黄金之髓（火）
+   <option value="01963002">奥德赛（水）
+   <option value="02803802">奥德赛之刃（水）
+   <option value="02242403">雷神剑因陀罗（雷）
+   <option value="02383203">雷神宝剑麒麟（雷）
+   <option value="01686304">封龍剑【绝一门】（龍）
+   <option value="02102305">霜之锋改（冰）
+   <option value="02663505">高阶霜之锋（冰）
+   <option value="02523905">究极＝达奥拉（冰）
+   <option value="--------">数値入力
+ </select>
+
+　武器利度
+  <select name="kire" onclick="test(14,1.4,3)">
+   <option value="0">赤(0.5 0.25)
+   <option value="1">橙(0.75 0.5)
+   <option value="2">黄(1.0 0.75)
+   <option selected value="3">緑(1.125 1.0)
+   <option value="4">青(1.25 1.0625)
+   <option value="5">白(1.5 1.125)
+ </select>
+
+<br><br>
+
+上の条件を選択するとこの下に計算結果が表示されます<br>
+ＰＳＰ等うまく表示されない時は
+<input type="button" value="計算"  onclick="test(14,1.4,3)">
+ボタンをクリック<br>
+<br>
+
+<b><font color="blue">合計ダメージ</font></b>
+<input type="text" name="T7">
+<br><br>
+
+通常ダメージ
+<input type="text" name="T5">
+　属性ダメージ
+<input type="text" name="T6">
+<br>
+
+通常攻击力
+<input type="text" name="T1">
+　属性攻击力
+<input type="text" name="T2">
+
+<br>
+
+通常肉質
+<input type="text" name="T3">
+　属性肉質
+<input type="text" name="T4">
+<br>
+
+肉質データ（切断　打撃　弾　火　水　雷　龍　冰）<br>
+<input type="text" name="T8" size="40">
+
+</form>
+
+<hr>
+
+<small>
+<a href="http://www.amazon.co.jp/exec/obidos/ASIN/4757728875/kouryakumem0c-22/ref=nosim" target="_blank">公式ガイドブック</a>のデータを使用しています<br>
+アクション別の威力　：ジャンプ斬り18　縦斬り１発目14　２発目12　回転斬り24<br>
+通常ダメージ　＝　威力×武器攻击力％÷1.4（×片手剣倍率1.2）×利度修正×肉質％<br>
+属性ダメージ　＝　属性攻击力÷10×利度修正×肉質％<br>
+</small>
+
+<br><br>
+
+<a href="test01.html">片手</a>
+　<a href="test02.html">双剣</a>
+　<a href="test03.html">大剣</a>
+　<a href="test04.html">ハンマー</a>
+　<a href="test05.html">ランス</a>
+　太刀
+　ガンランス
+　ボウガン
+　<a href="test10.html">弓</a>
+
+<br><br>
+
+
+
+<br><br>
+
+<a href="../index.html">怪物猎人２攻略TOP</a><br>
+
+</body></html>
